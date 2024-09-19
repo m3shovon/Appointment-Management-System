@@ -6,7 +6,7 @@
 {% block breadcrumb %}
     <div>
         <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
-        <p>Event Dashboard</p>
+        <!-- <p>Event Dashboard</p> -->
     </div>
     <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -16,27 +16,27 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-6 col-lg-3">
+    <div class="col-md-6 col-lg-6">
         <div class="widget-small primary coloured-icon">
             <i class="icon fa fa-files-o fa-3x"></i>
             <div class="info">
-                <h4><b>Appointment Completed </b></h4>
+                <h4><b>Total Appointment </b></h4>
                 <p><b>{{ total_event }}</b></p>
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-3">
+    <div class="col-md-6 col-lg-6">
         <div class="widget-small info coloured-icon">
-            <i class="icon fa fa-thumbs-o-up fa-3x"></i>
+            <i class="icon fa fa-users fa-3x"></i>
             <div class="info">
-                <h4><b>Appointment Running</b> </h4>
+                <h4><b>Upcoming Appointment</b> </h4>
                 <p><b>{{ running_events.count }}</b></p>
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-3">
+    <!-- <div class="col-md-6 col-lg-3">
         <div class="widget-small warning coloured-icon">
-            <i class="icon fa fa-users fa-3x"></i>
+            <i class="icon fa fa-thumbs-o-up fa-3x"></i>
             <div class="info">
                 <h4><b>Total Applicant</b></h4>
                 <p><b>10</b></p>
@@ -51,7 +51,7 @@
                 <p><b>4.8</b></p>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="col-md-12">
         <div class="tile">
             <div class="tile-body">
@@ -62,7 +62,7 @@
                                 <table class="table table-hover table-bordered dataTable no-footer" id="sampleTable" role="grid" aria-describedby="sampleTable_info">
                                     <thead>
                                         <tr role="row">
-                                            <th class="sorting_asc" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 261.641px;">SL</th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 102.141px;">SL</th>
                                             <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 417.312px;">Event Name</th>
                                             <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 189.281px;">Start Time</th>
                                             <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 102.141px;">End Time</th>

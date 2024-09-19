@@ -36,11 +36,12 @@
     
             <ul class="app-nav">
                 <!-- <p style="color: darkgrey; margin-right: 10px; margin-top: 15px; ">Powerd By: 3mS</p> -->
-                <li style="color: white; margin-right: 10px; margin-top: 15px; ">V1.8.33</li>
-                <li class="app-search">
+                <li style="color: white; margin-right: 20px; margin-top: 15px;">V1.8.33</li>
+                <!-- <li class="app-search">
                     <input class="app-search__input" type="search" placeholder="Search" />
                     <button class="app-search__button"><i class="fa fa-search"></i></button>
-                </li>
+                </li> -->
+
                 <!--=========================Notification Menu======================-->
                 <!-- <li class="dropdown">
                     <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
@@ -160,13 +161,13 @@
                     <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Events</span><i class="treeview-indicator fa fa-angle-right"></i></a>
                     <ul class="treeview-menu">
                         <li>
-                            <a class="treeview-item" href="{% url 'calendarapp:running_events' %}"><i class="icon fa fa-circle-o"></i> Running</a>
+                            <a class="treeview-item" href="{% url 'calendarapp:running_events' %}"><i class="icon fa fa-superpowers"></i> Running</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="treeview-item" href="{% url 'calendarapp:running_events' %}"><i class="icon fa fa-circle-o"></i> Upcoming</a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a class="treeview-item" href="{% url 'calendarapp:all_events' %}"><i class="icon fa fa-circle-o"></i> All</a>
+                            <a class="treeview-item" href="{% url 'calendarapp:all_events' %}"><i class="icon fa fa-superpowers"></i> All</a>
                         </li>
                     </ul>
                 </li>

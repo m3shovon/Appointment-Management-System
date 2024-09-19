@@ -23,17 +23,17 @@
         <div class="tile row">
             <div class="col-md-3">
                 <div id="external-events">
-                    <h4 class="mb-4">Running Events</h4>
+                    <h4 class="mb-4">Upcoming Appointment</h4>
                     {% for event in events_month %}
                       <div class="fc-event">
-                          <h3>{{ event.title }}</h3>
-                          <p>{{ event.description }}</p>
-                          <p>{{event.id}}</p>
+                          <h3>Token-{{event.id}}| {{ event.title }}</h3>
+                          <!-- <p>{{ event.description }}</p>
+                          <p>{{event.id}}</p> -->
                           <p>From: {{ event.start_time }}</p>
                           <p>To: {{ event.end_time }}</p>
                       </div>
                     {% empty %}
-                      <p>No Running Events Found</p>
+                      <p>No Upcoming Appointment Found</p>
                     {% endfor %}
                 </div>
             </div>
@@ -246,7 +246,7 @@
     });
     function formatDateTime(dateTime) {
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
-      const dataFormatada = new Date(dateTime).toLocaleDateString('pt-BR', options);
+      const dataFormatada = new Date(dateTime).toLocaleDateString('en-US', options);
       return dataFormatada;
     };
     document.getElementById('delete-event-button').addEventListener('click', function() {
