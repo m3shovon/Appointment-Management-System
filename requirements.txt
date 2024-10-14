@@ -1,3 +1,4 @@
 asgiref==3.7.2
 Django
 sqlparse==0.4.4
+django-schema-graph
