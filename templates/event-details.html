@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base/base.html' %}
 
 {% block title %}
 Event Details
@@ -11,14 +11,14 @@ Event Details
             <a class="btn btn-info right mr-2" href="{% url 'calendarapp:event_edit' event.pk %}"> Edit Event </a>
         </div>
 
-        <div class="clearfix">
+        <div class="clearfix mt-4">
             <h3>Event Name: {{ event.title }}</h3>
             <p>From <span style="color: gray;">{{ event.start_time }}</span> To <span style="color: gray;">{{ event.end_time }}</span></p>
             <hr>
             <p>{{ event.description }}</p>
         </div>
         <hr>
-        <div class="clearfix">
+        <!-- <div class="clearfix">
             <h4 class="left" > Members of this Event</h4>
             <a class="btn btn-success right" href="{% url 'calendarapp:add_eventmember' event.id %}"> Add Member </a>
         </div>
@@ -45,6 +45,6 @@ Event Details
                 </tr>
                 {% endfor %}
               </tbody>
-        </table>
+        </table> -->
     </div>
 {% endblock %}

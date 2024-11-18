@@ -110,6 +110,7 @@
                               <button id="delete-event-button" data-event-id="" type="button" class="btn btn-danger">Delete</button>
                               <button id="add-to-next-week" data-event-id-week="" type="button" class="btn btn-success">Next Week</button>
                               <button id="add-to-next-day" data-event-id-day="" type="button" class="btn btn-primary">Next Day</button>
+                              <button id="edit-event-button" data-event-id-edit="" type="button" class="btn btn-warning">Edit</button>
 
                           </div>
                       </form>
@@ -187,10 +188,12 @@
           var deleteButton = document.getElementById("delete-event-button");
           var nextWeek = document.getElementById("add-to-next-week");
           var nextDay = document.getElementById("add-to-next-day");
+          var editButton = document.getElementById("edit-event-button");
 
           deleteButton.setAttribute("data-event-id", id);
           nextWeek.setAttribute("data-event-id-week", id);
           nextDay.setAttribute("data-event-id-day", id);
+          editButton.setAttribute("data-event-id-edit", id);
           modal.style.display = 'block' 
           
           modalTitle.textContent = title;
@@ -200,6 +203,12 @@
           
          
           modal.style.display = 'block';
+
+        // Edit button action
+            editButton.onclick = function() {
+                window.location.href = `/event/edit/${id}/`;
+            };
+
         },
         editable: true,
         dayMaxEvents: true, // allow "more" link when too many events
